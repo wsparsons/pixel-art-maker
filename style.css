@@ -1,0 +1,31 @@
+table {
+  border-spacing: 0;
+}
+
+td {
+  border: 1px solid grey;
+  width: 15px;
+  height: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.color-box {
+  /* display: inline; */
+  /* display: flex; */
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.color-palette {
+  display: flex;
+}
+
+.current-color {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
