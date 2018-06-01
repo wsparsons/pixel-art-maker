@@ -4,8 +4,8 @@
   "description": "In this exercise, you'll create your own pixel art maker which will allow a user to choose colors from a palette and then paint pixel art. The interface is completely up to you, but it could look something like this.",
   "main": "index.js",
   "scripts": {
-    "build": "browserify main.js -o bundle.js",
-    "watch": "watchify main.js -o bundle.js",
+    "build": "browserify scripts/main.js -o bundle.js",
+    "watch": "watchify scripts/main.js -o bundle.js",
     "dev-server": "live-server .",
     "dev": "run-all \"npm run watch\" \"npm run dev-server\""
   },

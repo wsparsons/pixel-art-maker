@@ -1,5 +1,7 @@
+
 table {
   border-spacing: 0;
+
 }
 
 td {
@@ -9,6 +11,7 @@ td {
   margin: 0;
   padding: 0;
 }
+
 
 .color-box {
   /* display: inline; */

@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>My Pixel Maker</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="bundle.js" charset="utf-8"></script>
-  </head>
-  <body>
-    <div class="grid"></div>
-    <div class="color-palette"></div>
-    <p>Current Selected Color</p>
-    <div class="current-color"></div>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>My Pixel Maker</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="main.js" charset="utf-8"></script>
+</head>
+
+<body>
+  <h1>Pixel Art Maker</h1>
+
+  <div class="grid"></div>
+  <div class="color-palette"></div>
+
+  <div>
+    <p>Pick Your Color</p>
+    <input type="color" id="color-picker" value="#FF2600">
+  </div>
+
+  <p>Current Selected Color</p>
+  <div class="current-color"></div>
+</body>
+
 </html>

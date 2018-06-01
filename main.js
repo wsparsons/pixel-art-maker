@@ -1,7 +1,4 @@
-let color = ''
-const arrayOfColors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'brown', 'gray', 'black', 'white']
-const colorPalette = document.querySelector('.color-palette')
-
+// Create a grid using for loops and creating an unique id for each cell
 const createGrid = (num) => {
   const table = document.createElement('table')
   document.querySelector('.grid').append(table)
@@ -18,10 +15,12 @@ const createGrid = (num) => {
   }
 }
 
-createGrid(5)
+createGrid(30)
 
-const cells = Array.from(document.querySelectorAll('td'))
 
+// Create a color palette based on an array of colors
+const arrayOfColors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'brown', 'gray', 'black', 'white']
+const colorPalette = document.querySelector('.color-palette')
 for (let i = 0; i < arrayOfColors.length; i++){
   const divOfColor = document.createElement('div')
   divOfColor.setAttribute('class','color-box')
@@ -30,19 +29,29 @@ for (let i = 0; i < arrayOfColors.length; i++){
   colorPalette.appendChild(divOfColor)
 }
 
-const allColors = Array.from(document.querySelectorAll('.color-box'))
 
+// coloring the cell based on the color picked
+let color = ''
+const cells = Array.from(document.querySelectorAll('td'))
+const colorPicker = document.querySelector('#color-picker')
+const allColors = Array.from(document.querySelectorAll('.color-box'))
+const currentColor = document.querySelector('.current-color')
 
 const selectColor = () => {
   color = event.target.id
   displayCurrentColor()
 }
 
+const displayCurrentColor = () => {
+  // currentColor.style.backgroundColor = color
+  currentColor.style.backgroundColor = colorPicker.value
+}
+
 const changeColor = () => {
-  console.log('hi')
   let id = event.target.id
   let element = document.getElementById(id)
-  element.style.backgroundColor = color
+  // element.style.backgroundColor = color
+  element.style.backgroundColor = colorPicker.value
 }
 
 allColors.forEach(singleColor => {
@@ -52,8 +61,3 @@ allColors.forEach(singleColor => {
 cells.forEach(cell => {
   cell.addEventListener('click', changeColor)
 })
-
-const currentColor = document.querySelector('.current-color')
-const displayCurrentColor = () => {
-  currentColor.style.backgroundColor = color
-}
